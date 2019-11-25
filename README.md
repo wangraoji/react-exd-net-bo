@@ -11,4 +11,4 @@
 
 6. 考虑到主题需要明确的UI设计，所以我这里就没有添加了。
 
-7. 这是就暂且定位初始模板，tag 为 v0.0.1！
+7. 这是就暂且定位初始模板，tag 为 [v0.0.1](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.1)！
