@@ -1,0 +1,15 @@
+.my-layout {
+    .ant-layout-header {
+        color: #fff;
+        height: 60px;
+        line-height: 60px;
+    }
+    .ant-layout-sider {
+        color: #fff;
+        .ant-menu {
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+}

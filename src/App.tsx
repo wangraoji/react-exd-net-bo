@@ -1,13 +1,10 @@
 import React from 'react';
-
 import './App.scss';
-import { Button } from 'antd';
+import LayoutCom from './layout';
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button type="primary">Button</Button>
-      </header>
+    <div className="App h100">
+      <LayoutCom />
     </div>
   );
 }
