@@ -29,4 +29,4 @@
 
 6. 添加路由跳转 history , yarn add history!  添加：src/history.ts
 
-7. 这里我定为 v0.0.2
+7. 这里我定为 [v0.0.2](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.2)！
