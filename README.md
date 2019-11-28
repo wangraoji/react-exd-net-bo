@@ -41,4 +41,4 @@
 
 4. 添加路由按需加载(VUE用惯了，所以习惯性的加了)！ 在src\components\asyncComponent 需要用的地方只需要 component: asyncComponent(() => import("@/views/home")),
 
-5. 基础底架目测就到这里。这里我定位 [v0.0.3](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.2)！
+5. 基础底架目测就到这里。这里我定位 [v0.0.3](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.3)！
