@@ -30,3 +30,15 @@
 6. 添加路由跳转 history , yarn add history!  添加：src/history.ts
 
 7. 这里我定为 [v0.0.2](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.2)！
+
+
+### 完善菜单路由
+1. 菜单初始化默认选中
+
+2. 菜单选中路由后刷新默认选中。
+
+3. 关于为什么路由使用history而不是用withRouter link等 恩...主要我还是感觉history更方便。虽然用withRouter可以在prop读到路由数据，但是我更喜欢使用 history.listen。其次withRouter需要withRouter(component) ，这个什么时候包裹我没有深入研究。所以我选择了使用 history。再一个，就比如初始化的时候，你没法手动去 LinkTo home 而 history 可以 push 可以 go(-1)等等一系列操作。
+
+4. 添加路由按需加载(VUE用惯了，所以习惯性的加了)！ 在src\components\asyncComponent 需要用的地方只需要 component: asyncComponent(() => import("@/views/home")),
+
+5. 基础底架目测就到这里。这里我定位 0.0.3 

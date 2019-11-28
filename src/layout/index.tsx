@@ -5,10 +5,20 @@ import { HeaderCom, MenuCom } from '../components';
 // 引入路由
 import { HashRouter as Router, Route } from "react-router-dom";
 import routes from '@/router';
-
-
+// 引入按需加载
+import asyncComponent from '@/components/asyncComponent';
+let newRoutes: any = [];
+returnArr(routes);
+function returnArr(data: any) {
+  data.forEach((el: any) => {
+    if (!el.subMen) {
+      newRoutes.push(el)
+    } else {
+      returnArr(el.subMen);
+    }
+  })
+}
 const { Header, Sider, Content } = Layout;
-
 class LayoutCom extends React.Component {
   state = {
     collapsed: false,
@@ -31,14 +41,12 @@ class LayoutCom extends React.Component {
               <MenuCom />
             </Sider>
             <Content>
-              {routes.map((route, index) => (
-                // Render more <Route>s with the same paths as
-                // above, but different components this time.
+              {newRoutes.map((route: any, inx: any) => (
                 <Route
-                  key={index}
+                  key={inx}
                   path={route.path}
                   exact={route.exact}
-                  component={route.component}
+                  component={route.component ? route.component : asyncComponent(() => import("@/views/page404"))}
                 />
               ))}
             </Content>
@@ -50,3 +58,4 @@ class LayoutCom extends React.Component {
 }
 
 export default LayoutCom;
+
