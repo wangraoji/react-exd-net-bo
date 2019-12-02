@@ -14,23 +14,12 @@ const routes = [
         icon: "mail",
         subMen: [
             {
-                path: "/menuone/xx-one",
-                name: "选项1",
-                subMen: [
-                    {
-                        path: "/menuone/xx-one/xx-one-1",
-                        name: "选项1-1",
-                        component: asyncComponent(() => import("@/views/page1")),
-                    },
-                    {
-                        path: "/menuone/xx-one/xx-one-2",
-                        name: "选项1-2",
-                        component: asyncComponent(() => import("@/views/page1")),
-                    }
-                ],
+                path: "/table-demo",
+                name: "表格deom",
+                component: asyncComponent(() => import("@/views/page1")),
             },
             {
-                path: "/menuone/xx-two",
+                path: "/xx-two",
                 name: "选项2",
                 component: asyncComponent(() => import("@/views/page2")),
             },
@@ -47,11 +36,11 @@ const routes = [
         icon: "mail",
         subMen: [
             {
-                path: "/menutwo/xx-four",
+                path: "/xx-four",
                 name: "选项4",
             },
             {
-                path: "/menutwo/xx-five",
+                path: "/xx-five",
                 name: "选项5",
             },
         ],

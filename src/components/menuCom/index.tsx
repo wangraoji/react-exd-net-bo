@@ -15,6 +15,7 @@ class MenuCom extends React.Component<any, any>{
         };
     }
 
+
     componentDidMount() {
         // 初始化路由
         if (history.location.pathname === "/") {

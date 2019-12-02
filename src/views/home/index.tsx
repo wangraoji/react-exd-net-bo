@@ -1,17 +1,35 @@
 import React from 'react';
-
-class Home extends React.Component<any,any>{
-    constructor(props:any){
+import { getData } from "@/api/testApi";
+class Home extends React.Component<any, any>{
+    constructor(props: any) {
         super(props);
         this.state = {
-            page:"首页",
+            page: "首页",
+            styles: {
+                background: "#fff",
+                "fontSize": "16px",
+                "textAlign": "center",
+                "fontWeight": "bold",
+                color: "#000",
+                padding: "20px"
+            }
         };
     }
 
-    render(){
+    async getData() {
+        let body = {
+            age: "18"
+        };
+        let resData = await getData("search",body);
+        console.log(resData);
+    }
+    render() {
         return (
             <div>
-                {this.state.page}
+                <div>{this.state.page}</div>
+                <div style={this.state.styles}>
+                    <span onClick={this.getData.bind(this)}>测试数据</span>
+                </div>
             </div>
         )
     }
