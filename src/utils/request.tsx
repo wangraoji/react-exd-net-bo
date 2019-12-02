@@ -1,27 +1,3 @@
-// import fetch from 'cross-fetch'
-
-// function service(data: any) {
-//     if (data.method === "get") {
-//         return
-//     } else {
-//         fetch(data.url, {
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             method: "GET",
-//             // body: `data=${JSON.stringify(data.param)}`
-//         }).then(res => res.json())
-//             .then(data => {
-//                 console.log(data);
-//             })
-//             .catch(e => console.log('错误:', e))
-//     }
-
-// }
-
-
-// export default service;
-
 import axios from 'axios'
 // 创建axios实例
 const service = axios.create({
@@ -30,7 +6,7 @@ const service = axios.create({
     },
 
     // baseURL: process.env.VUE_APP_URL, // api 的 base_url
-    baseURL:"http://localhost:3000/api",
+    // baseURL:"http://localhost:3000/api",
     timeout: 5000 // 请求超时时间
 })
 // console.log(111111111);

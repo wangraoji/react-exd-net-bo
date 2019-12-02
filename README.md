@@ -51,3 +51,11 @@
 3. 加入utils\request.tsx（axios封装、拦截）
 
 4. 这里我定位为 [v0.0.4](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.4)！
+
+### 出现跨域怎么办？
+1. 在package.json最下面加入： "proxy":"http://localhost:3001/"
+2. 删除 utils\request.tsx 里面实例化 axios 的 baseurl
+3. 修改 api/testApi.tsx 里的 api ， 因为的请求路径是 http://localhost:3001/testApi/search  而我加入proxy的是 http://localhost:3001 所以这里我只需要用 /testApi/ + url 即可
+4. 然后看network请求是不是变成了http://localhost:3000/testApi/search  是的话就对了！
+5. 有同学就说了，我有多个要加怎么办。我这里就不上传了。 附链接：http://www.mamicode.com/info-detail-2525374.html 这里说的很清楚了，2.0以下直接加在package.json里，以上 yarn add http-proxy-middleware  在项目目录src/下新建setupProxy.js文件 写入你需要添加的代码。 附官网链接：https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually
+
