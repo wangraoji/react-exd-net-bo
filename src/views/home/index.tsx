@@ -20,8 +20,8 @@ class Home extends React.Component<any, any>{
         let body = {
             age: "18"
         };
-        let resData = await getData("search",body);
-        console.log(resData);
+        let res = await getData('search',body);
+        console.log(res);
     }
     render() {
         return (

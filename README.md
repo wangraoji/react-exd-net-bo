@@ -42,3 +42,12 @@
 4. 添加路由按需加载(VUE用惯了，所以习惯性的加了)！ 在src\components\asyncComponent 需要用的地方只需要 component: asyncComponent(() => import("@/views/home")),
 
 5. 基础底架目测就到这里。这里我定位 [v0.0.3](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.3)！
+
+### 加入ajax
+1. 本项目使用的 axios  为什么用 axios 而不用 fetch 个人觉得 axios 传参 拦截器 封装都比 fetch好。
+
+2. 本项目使用node-express搭建后台。  https://gitee.com/wrj1991/mockServeDemo/tree/master
+
+3. 加入utils\request.tsx（axios封装、拦截）
+
+4. 这里我定位为 v0.0.4
