@@ -1,3 +1,6 @@
+### 前言
+本项目地址：http://106.54.195.124:8082
+
 ### 开始
 1. 安装 create-react-app  官网：https://www.html.cn/create-react-app/
 
