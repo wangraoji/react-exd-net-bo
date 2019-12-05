@@ -9,35 +9,30 @@ const routes = [
         component: asyncComponent(() => import("@/views/home")),
     },
     {
-        path: "/menuone",
-        name: "菜单一",
-        icon: "mail",
+        path: "/demo",
+        name: "antd组件示例",
+        icon: "dashboard",
         subMen: [
             {
                 path: "/table-demo",
                 name: "表格deom",
-                component: asyncComponent(() => import("@/views/page1")),
+                component: asyncComponent(() => import("@/views/demos/table")),
             },
             {
                 path: "/xx-two",
                 name: "选项2",
-                component: asyncComponent(() => import("@/views/page2")),
             },
         ],
     },
     {
-        path: "/xx-three",
-        name: "选项3",
-        icon: "mail",
-    },
-    {
-        path: "/menutwo",
-        name: "菜单二",
-        icon: "mail",
+        path: "/doc",
+        name: "文档",
+        icon: "ordered-list",
         subMen: [
             {
-                path: "/xx-four",
-                name: "选项4",
+                path: "/node+mongodb",
+                name: "node+mongodb",
+                component: asyncComponent(() => import("@/views/docs/nodeMongoDB")),
             },
             {
                 path: "/xx-five",

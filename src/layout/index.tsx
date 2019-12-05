@@ -41,14 +41,16 @@ class LayoutCom extends React.Component {
               <MenuCom />
             </Sider>
             <Content>
-              {newRoutes.map((route: any, inx: any) => (
-                <Route
-                  key={inx}
-                  path={route.path}
-                  exact={route.exact}
-                  component={route.component ? route.component : asyncComponent(() => import("@/views/page404"))}
-                />
-              ))}
+              <div className="my-content">
+                {newRoutes.map((route: any, inx: any) => (
+                  <Route
+                    key={inx}
+                    path={route.path}
+                    exact={route.exact}
+                    component={route.component ? route.component : asyncComponent(() => import("@/views/page404"))}
+                  />
+                ))}
+              </div>
             </Content>
           </Layout>
         </Layout>

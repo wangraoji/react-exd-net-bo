@@ -7,7 +7,7 @@ const Page404: React.FC = () => {
             status="404"
             title="404"
             subTitle="Sorry, the page you visited does not exist."
-            extra={<Button type="primary"><Link to="/menuone/xx-one/xx-one-1">回到首页</Link></Button>}
+            extra={<Button type="primary"><Link to="/home">回到首页</Link></Button>} 
         />
     )
 }

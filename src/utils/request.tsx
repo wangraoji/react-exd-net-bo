@@ -1,9 +1,10 @@
 import axios from 'axios'
+import { message } from "antd";
 // 创建axios实例
 const service = axios.create({
-    headers: {
-        'Content-Type': "application/json;charset=utf-8"
-    },
+    // headers: {
+    //     'Content-Type': "application/json;charset=utf-8"
+    // },
 
     // baseURL: process.env.VUE_APP_URL, // api 的 base_url
     // baseURL:"http://localhost:3000/api",
@@ -38,13 +39,9 @@ service.interceptors.response.use(
         }
     },
     error => {
-        console.log('err' + error) // for debug
-        // Message({
-        //     message: `没有请求到数据`,
-        //     type: 'error',
-        //     duration: 5 * 1000
-        // })
-        return false
+        // console.log('err' + error) // for debug
+        message.error('err' + error, 5);
+        return
     }
 )
 
