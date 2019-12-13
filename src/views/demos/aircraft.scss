@@ -1,0 +1,182 @@
+.aircraft {
+    .left-box,
+    .center-box,
+    .right-box {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid #ccc;
+    }
+    .left-box {
+        width: 300px;
+    }
+    .center-box {
+        width: calc(100% - 600px);
+        border-left: 0;
+        border-right: 0;
+        position: relative;
+    }
+    .right-box {
+        width: 300px;
+    }
+    .not-data {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        margin-top: -14px;
+        cursor: default;
+        span {
+            cursor: pointer;
+            color: #1890ff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.left-box {
+    .l-h {
+        span {
+            display: inline-block;
+            width: 50%;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            cursor: default;
+            &:last-child {
+                border-left: 1px solid #ccc;
+                cursor: pointer;
+                color: #1890ff;
+                text-decoration: underline;
+            }
+        }
+        border-bottom: 1px solid #ccc;
+    }
+    .l-c {
+        position: relative;
+        height: calc(100% - 29px);
+    }
+}
+
+.center-box {
+    .my-aircraft-box {
+        position: absolute;
+        height: 70%;
+        width: 90%;
+        left: 5%;
+        top: 15%;
+        border: 1px solid #ccc;
+    }
+}
+
+.right-box {
+    .r-b-s-rq{
+        height: 20%;
+        padding-bottom: 2px;
+        cursor: default;
+        .r-b-a-rq {
+            background: #f7f7f7;
+            height: 100%;
+            text-align: center;
+            padding-top: 5%;
+            cursor: pointer;
+            .r-b-a-b {
+                height: 70%;
+                position: relative;
+                // background: red;
+            }
+        }
+    }
+    .coloring {
+        height: 100%;
+        .r-b-c-t {
+            height: calc(100% - 30px);
+        }
+        .r-b-c-b {
+            height: 30px;
+            line-height: 30px;
+            background: #ddd;
+            span {
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 我的飞机
+.m-a {
+    .a-h,
+    .a-b,
+    .a-w,
+    .a-y-l,
+    .a-y-r {
+        position: absolute;
+        border: 1px solid #ccc;
+        .zz {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+    // 机头
+    .a-h {
+        width: 10%;
+        height: 20%;
+        top: 40%;
+        left: 10%;
+    }
+    // 机身
+    .a-b {
+        width: 60%;
+        left: 20%;
+        height: 20%;
+        top: 40%;
+        border-left: 0;
+        border-right: 0;
+    }
+    // 机尾
+    .a-w {
+        width: 12%;
+        height: 50%;
+        top: 25%;
+        left: 80%;
+    }
+    // 左翼
+    .a-y-l {
+        width: 18%;
+        left: 40%;
+        bottom: 2%;
+        border-top: 0;
+        height: 38%;
+    }
+    // 右翼
+    .a-y-r {
+        width: 18%;
+        left: 40%;
+        top: 2%;
+        border-bottom: 0;
+        height: 38%;
+    }
+}
+
+.color-div-box {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    height: 100px;
+    text-align: center;
+    background: #f7f7f7;
+    .color-demo {
+        display: inline-block;
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

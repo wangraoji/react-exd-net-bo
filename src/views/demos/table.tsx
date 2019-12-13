@@ -169,6 +169,7 @@ class Page1 extends React.Component<any, any> {
             pageSize: pagination.pageSize
         })
         if (!res) {
+            this.setState({ tableLoading: false })
             return;
         }
         if (res.isOk) {
@@ -183,6 +184,7 @@ class Page1 extends React.Component<any, any> {
             })
         }
         this.setState({ tableLoading: false })
+        
     }
 
     async requestFn(data: any, url?: string) {

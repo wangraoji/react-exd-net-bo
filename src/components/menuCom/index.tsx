@@ -1,6 +1,5 @@
 import React from "react";
 import { Menu, Icon } from 'antd';
-import history from "@/history";
 import routes from "@/router";
 import { Link } from 'react-router-dom'
 const { SubMenu } = Menu;
@@ -17,6 +16,7 @@ class MenuCom extends React.Component<any, any>{
 
 
     componentDidMount() {
+        let history = this.props.history;
         // 初始化路由
         if (history.location.pathname === "/") {
             history.push('/home');
@@ -30,6 +30,12 @@ class MenuCom extends React.Component<any, any>{
                 selectedKeys: [location.pathname]
             })
         })
+    }
+    
+    componentWillUnmount() {
+        this.setState = (state, callback) => {
+            return;
+        };
     }
 
     // 初始化menu选中

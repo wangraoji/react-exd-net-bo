@@ -19,6 +19,11 @@ const routes = [
                 component: asyncComponent(() => import("@/views/demos/table")),
             },
             {
+                path: "/aircraft-demo",
+                name: "飞机demo",
+                component: asyncComponent(() => import("@/views/demos/aircraft")),
+            },
+            {
                 path: "/xx-two",
                 name: "选项2",
             },
