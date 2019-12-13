@@ -3,7 +3,7 @@ import { Menu, Icon } from 'antd';
 import routes from "@/router";
 import { Link } from 'react-router-dom'
 const { SubMenu } = Menu;
-
+import history from '@/history';
 class MenuCom extends React.Component<any, any>{
     ccc: any = [];
     constructor(props: any) {
@@ -16,7 +16,6 @@ class MenuCom extends React.Component<any, any>{
 
 
     componentDidMount() {
-        let history = this.props.history;
         // 初始化路由
         if (history.location.pathname === "/") {
             history.push('/home');

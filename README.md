@@ -30,7 +30,7 @@
 - 没带#的   import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
 - 带#的     import { HashRouter as Router,Route,Link } from 'react-router-dom';
 
-6. 添加路由跳转 history , yarn add history!  添加：src/history.ts
+6. 添加路由跳转 history , yarn add history!  添加：src/history.ts（为什么要它，因为不是通过router渲染的组件没有props.history）
 
 7. 这里我定为 [v0.0.2](https://github.com/wangraoji/react-exd-net-bo/tree/0.0.2)！
 
@@ -69,4 +69,4 @@
 
 1. 文档地址：http://106.54.195.124:8082/#/table-demo
 
-2. 删除history 修改【完善菜单路由】文档
+2. 修改【添加layout、完善菜单路由】文档
